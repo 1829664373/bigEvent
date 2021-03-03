@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>layout 后台大布局 - Layui</title>
-    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
-    <link rel="stylesheet" href="assets/fonts/iconfont.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
 </head>
 
@@ -19,8 +19,8 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <span class="layui-nav-img">L</span>
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img tx">
+                        <span class="layui-nav-img tx-text">L</span>
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img tx-img">
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
@@ -37,8 +37,8 @@
             <div class="layui-side-scroll">
                 <div class="PersonalCenter">
                     <a href="javascript:;" class="a1">
-                        <span class="layui-nav-img">L</span>
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img tx" style='display: none;'>
+                        <span class="layui-nav-img tx-text">L</span>
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img tx-img">
                         <span class="Personal">欢迎***</span>
                     </a>
                 </div>
@@ -46,7 +46,7 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test">
                     <li class="layui-nav-item layui-this">
-                        <a href="home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a>
+                        <a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a>
                     </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
@@ -76,7 +76,7 @@
 
         <div class="layui-body">
             <div class="Content">
-                <iframe name="fm" src="home/dashboard.html" frameborder="0"></iframe>
+                <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
             </div>
         </div>
 
@@ -85,17 +85,17 @@
             © www.itheima.com - 黑马程序员
         </div>
     </div>
-    <script src="assets/lib/layui/layui.all.js"></script>
-    <script src="assets/lib/jquery.js"></script>
-    <script src="assets/js/baseAPI.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/baseAPI.js"></script>
+    <script src="/assets/js/index.js"></script>
     <script>
         //JavaScript代码区域
-        layui.use('element', function () {
-            var element = layui.element;
+    //     layui.use('element', function () {
+    //         var element = layui.element;
 
-        });
-    </script>
+    //     });
+    // </script>
 </body>
 
 </html>

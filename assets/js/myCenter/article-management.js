@@ -1,5 +1,6 @@
 $(function () {
     // let md = template('tpl-table')
+    console.log(123);
     function addArticle() {
         $.get('/my/article/cates', function (res) {
             if (res.status !== 0) {
@@ -35,6 +36,7 @@ $(function () {
         })
 
     });
+    // 修改文件表单
     let indexEdit = null
     $('tbody').on('click', '.btn-edit', function (e) {
         e.preventDefault();
@@ -53,6 +55,7 @@ $(function () {
                 layui.form.val('for', res.data)
             }
         });
+        // 修改按钮
         $('#form-2').submit(function (e) {
             e.preventDefault();
             const s = $(this).serialize()
@@ -71,6 +74,7 @@ $(function () {
             });
         })
     })
+    // 删除按钮
 
     $('tbody').on('click', '.deleteButton', function () {
         //eg1
@@ -86,6 +90,7 @@ $(function () {
                         return layui.layer.msg('删除失败');
                     }
                     layui.layer.msg('删除成功');
+                    console.log(res);
                     layer.close(index);
                     addArticle()
                 }

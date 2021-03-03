@@ -31,14 +31,15 @@ function gitsut() {
 }
 // 头像
 function headPortrait(hp) {
+    // console.log(hp.user_pic);
     const name = hp.nickname || hp.username
     $('.Personal').html('欢迎 ' + name)
     if (hp.user_pic !== null) {
-        $('.tx').attr('src', hp.user_pic).show()
-        $('.layui-nav-img').hide()
+        $('.tx-img').attr('src', hp.user_pic).show()
+        $('.tx-text').hide()
     } else {
-        $('.layui-nav-img').html(name[0].toUpperCase()).show()
-        $('.tx').hide()
+        $('.tx-text').html(name[0].toUpperCase()).show()
+        $('.tx-img').hide()
     }
 
 }
