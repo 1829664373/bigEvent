@@ -1,8 +1,18 @@
 $(function () {
     // let md = template('tpl-table')
-    console.log(123);
+    // console.log(123);
+
+    function uo() {
+        $('.form-2').on('keyup', function (e) {
+            console.log(e.keyCode);
+        })
+        // layui.layer.close(indexEdit)
+    }
+
+    // 获取文章列表
     function addArticle() {
         $.get('/my/article/cates', function (res) {
+            console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg('获取文章失败');
             }
@@ -12,6 +22,7 @@ $(function () {
         })
     }
     addArticle()
+    // 添加文章
     let indexadd = null
     $('.layui-btn-normal').on('click', function () {
         // let f = template('tpl-add')
@@ -21,6 +32,7 @@ $(function () {
             title: '添加文章分类',
             content: $('#tpl-add').html()
         });
+        // 确认递交按钮
         $('body').on('submit', '#form-1', function (e) {
             e.preventDefault();
             $.post("/my/article/addcates", $(this).serialize(),
@@ -47,7 +59,9 @@ $(function () {
             content: $('#add-edit').html()
         });
         let id = $(this).parent().attr('data-id')
-
+        // console.log(e.keyCode);
+        uo()
+        // console.log(id);
         $.ajax({
             type: "get",
             url: "/my/article/cates/" + id,
@@ -55,10 +69,11 @@ $(function () {
                 layui.form.val('for', res.data)
             }
         });
-        // 修改按钮
+        // 修改确定按钮
         $('#form-2').submit(function (e) {
             e.preventDefault();
             const s = $(this).serialize()
+            console.log(s);
             $.ajax({
                 type: "post",
                 url: "/my/article/updatecate",
@@ -93,6 +108,7 @@ $(function () {
                     console.log(res);
                     layer.close(index);
                     addArticle()
+
                 }
             });
 
