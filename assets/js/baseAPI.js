@@ -14,6 +14,6 @@ $.ajaxPrefilter(function (options) {
     }
 
 })
-function sund() {
-    window.
-}
+// function sund() {
+//     window.
+// }
